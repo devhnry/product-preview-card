@@ -113,6 +113,7 @@ p{
   background-color: var(--clr-accent-400) ;
 }
 
+
 /* ==== Main ====  */
 .container{
   background-color: var(--clr-neutral-100);
@@ -168,6 +169,7 @@ p{
   padding-left: 1rem;
   text-decoration: line-through;
 }
+
 
 @media(min-width: 40em){
   .container{
