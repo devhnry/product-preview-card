@@ -13,11 +13,9 @@
     <main>
       <section class="container">
 
-        <picture class="product__mobile">
-          <img src="./src/images/image-product-mobile.jpg" alt="product-img" class="product__img">
-        </picture>
-        <picture class="product__desktop">
-          <img src="./src/images/image-product-desktop.jpg" alt="product-img" class="product__img">
+        <picture class="product__img">
+          <img src="./src/images/image-product-mobile.jpg" alt="product-img" class="product__mobile__img">
+          <img src="./src/images/image-product-desktop.jpg" alt="product-img" class="product__desktop__img">
         </picture>
 
         <div class="product">
@@ -27,9 +25,12 @@
           <p class="product__desc f-body">A floral, solar and voluptuous interpretation composed by Olivier Polge, Perfumer-Creator for the House of CHANEL.</p>
           <div class="prices">
             <p class="new-price f-header">$149.99</p>
-            <p class="old-price f-body">
-              $169.99
-            </p>
+            <!-- <p class="old-price f-body" >$169.99</p> -->
+            <del class="old-price f-body" >
+              <span class="sr-only">The old price was</span>
+                  $169.99 
+              </del>
+
           </div>
           <button class="button">Add to Cart
           </button>
