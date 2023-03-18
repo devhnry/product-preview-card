@@ -1,0 +1,133 @@
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+  box-sizing: border-box; }
+
+/*
+    2. Remove default margin
+  */
+* {
+  margin: 0;
+  padding: 0; }
+
+/*
+    3. Allow percentage-based heights in the application
+  */
+html, body {
+  height: 100%; }
+
+/*
+    Typographic tweaks!
+    4. Add accessible line-height
+    5. Improve text rendering
+  */
+body {
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased; }
+
+/*
+    6. Improve media defaults
+  */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%; }
+
+/*
+    7. Remove built-in form typography styles
+  */
+input, button, textarea, select {
+  font: inherit; }
+
+/*
+    8. Avoid text overflows
+  */
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word; }
+
+h1, h2 {
+  line-height: 1.1; }
+
+.flex-group {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap; }
+
+.visually-hidden:not(:focus):not(:active) {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px; }
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: .875rem;
+  font-weight: 500;
+  background-color: #f2ebe3;
+  color: #6c7289;
+  padding: 1rem;
+  display: grid;
+  place-items: center;
+  position: relative; }
+
+.footer {
+  position: absolute;
+  bottom: 0.5rem;
+  text-align: center;
+  font-size: 0.6rem; }
+  .footer__link {
+    color: #1c232b;
+    text-decoration: none; }
+
+.product {
+  display: grid;
+  max-width: 600px;
+  background-color: white;
+  overflow: hidden;
+  border-radius: .8rem; }
+  @media (min-width: 600px) {
+    .product {
+      grid-template-columns: repeat(2, 1fr); } }
+  .product__description {
+    padding: 1.5rem;
+    display: grid;
+    gap: 1rem; }
+    @media (min-width: 600px) {
+      .product__description {
+        padding: 2rem; } }
+  .product__category {
+    text-transform: uppercase;
+    letter-spacing: 4.5px; }
+  .product__title {
+    font-family: "Fraunces", serif;
+    font-weight: 700;
+    font-size: 2rem;
+    color: #1c232b; }
+  .product__price--new {
+    font-size: 2rem;
+    font-family: "Fraunces", serif;
+    color: #3c8067; }
+
+.btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: .5rem;
+  background-color: #3c8067;
+  color: white;
+  font-weight: 700;
+  padding: .8em 1.5em;
+  border: none;
+  border-radius: .5rem;
+  cursor: pointer; }
+  .btn:is(:hover, :focus) {
+    background-color: #1d3e32; }
+  .btn[data-icon="shopping-cart"]::before {
+    content: "";
+    height: 16px;
+    width: 15px;
+    background-image: url(../img/icon-cart.svg); }
